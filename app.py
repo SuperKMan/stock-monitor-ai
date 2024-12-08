@@ -16,3 +16,11 @@ def get_stock_price(ticker):
         return stock_info['Close'].iloc[-1]
     else:
         return None
+
+if __name__ == "__main__":
+    ticker = input("Enter the stock ticker symbol (e.g., 'AAPL' for Apple Inc.): ")
+    price = get_stock_price(ticker)
+    if price is not None:
+        print(f"The current stock price of {ticker} is: {price}")
+    else:
+        print(f"Could not retrieve the stock price for {ticker}.")
