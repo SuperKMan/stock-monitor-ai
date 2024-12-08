@@ -21,7 +21,7 @@ def get_stock_price(ticker):
 if __name__ == "__main__":
     ticker = input("Enter the stock ticker symbol (e.g., 'AAPL' for Apple Inc.): ")
     model_name = "stock-price-model"  # Replace with the actual model name
-    response = ollama.chat(model_name, f"Get the current stock price for {ticker}")
+    response = ollama.chat(model_name, messages=[{"role": "user", "content": f"Get the current stock price for {ticker}"}])
     price = response.get('price', None)
     if price is not None:
         print(f"The current stock price of {ticker} is: {price}")
