@@ -1,4 +1,5 @@
 import yfinance as yf
+import ollama
 
 def get_stock_price(ticker):
     """
@@ -19,7 +20,8 @@ def get_stock_price(ticker):
 
 if __name__ == "__main__":
     ticker = input("Enter the stock ticker symbol (e.g., 'AAPL' for Apple Inc.): ")
-    price = get_stock_price(ticker)
+    response = ollama.chat(f"Get the current stock price for {ticker}")
+    price = response.get('price', None)
     if price is not None:
         print(f"The current stock price of {ticker} is: {price}")
     else:
