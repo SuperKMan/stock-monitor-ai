@@ -1,0 +1,9 @@
+{
+  "openai/hf:Qwen/Qwen2.5-Coder-32B-Instruct": {
+    "context_window": 32000,
+    "token_cost": {
+      "prompt": 0.001,
+      "completion": 0.002
+    }
+  }
+}
