@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Logs
+*.log
+stock_monitor.log
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Streamlit
+.streamlit/
